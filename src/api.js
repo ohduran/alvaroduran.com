@@ -1,4 +1,4 @@
-«import { sync } from "glob";
+import { sync } from "glob";
 import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
