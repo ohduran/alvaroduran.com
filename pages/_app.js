@@ -1,12 +1,15 @@
-import DefaultLayout from "../components/layouts/DefaultLayout";
-import "../styles/globals.css";
+import Head from 'next/head'
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <DefaultLayout>
+    <div className='antialiased'>
+      <Head>
+        <title>Alvaro Duran</title>
+      </Head>
       <Component {...pageProps} />
-    </DefaultLayout>
-  );
+    </div>
+  )
 }
 
-export default MyApp;
+export default MyApp
