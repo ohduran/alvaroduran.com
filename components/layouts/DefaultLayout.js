@@ -5,13 +5,13 @@ import Footer from '@/components/organisms/Footer'
 export default function DefaultLayout({ children }) {
   return (
     <div
-      className='grid gap-1 min-h-screen'
+      className='grid gap-1 min-h-screen container'
       style={{
         gridTemplateRows: 'auto 1fr auto',
       }}
     >
       <Header />
-      <main className=''>{children}</main>
+      <main className='px-2 sm:px-6 mx-auto'>{children}</main>
       <Footer />
     </div>
   )

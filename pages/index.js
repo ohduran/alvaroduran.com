@@ -2,8 +2,11 @@ import { getAllEssays } from '@/src/api'
 import DefaultLayout from '@/components/layouts/DefaultLayout'
 import UnderlineHoverLink from '@/components/atoms/UnderlineHoverLink'
 import Link from 'next/link'
-import { H1, H2 } from '@/components/molecules/Typography'
-import EssaySection from '@/components/molecules/sections/essaySection'
+import { H1, P } from '@/components/molecules/Typography'
+import Essays from '@/components/molecules/sections/Essays'
+import ComingSoon from '@/components/organisms/ComingSoon'
+import PostsListItem from '@/components/molecules/PostsListItem'
+import ReadMore from '@/components/atoms/ReadMore'
 
 export default function Home({ essays }) {
   return (
@@ -11,37 +14,49 @@ export default function Home({ essays }) {
       <main>
         <header id='heroSection'>
           <H1>
-            <span className='font-semibold'>Maggie</span> makes visual essays
-            about programming, design, and anthropology.
+            <span className=''>Maggie</span> makes visual essays about
+            programming, design, and anthropology.
           </H1>
-          <H2>
+          <P>
             Designer, anthropologist, and mediocre developer
             <br />
             Currently leading design at{' '}
-            <UnderlineHoverLink href='https://ought.org'>
-              Ought
+            <UnderlineHoverLink href='https://kiwi.com'>
+              Kiwi.com
             </UnderlineHoverLink>{' '}
-          </H2>
+          </P>
         </header>
-        <section
-          id='Essays'
-          style={{
-            gridArea: 'essays',
-          }}
-        >
-          <Link href='/essays'>
-            <SectionHeader>Essays</SectionHeader>
-          </Link>
-          <SubHeader>
-            Opinionated, longform narrative writing with an agenda
-          </SubHeader>
-          <EssaySection essays={essays.slice(0, 4)} />
+        <Essays
+          className='px-2 sm:px-6 mx-auto py-4'
+          essays={essays.slice(-5, -1)}
+        />
+        <ComingSoon
+          className='flex justify-between px-2 sm:px-6 mx-auto'
+          title='The Fraud Provider Series'
+          subtitle='Accelerate your acquisition of business expertise.'
+          href='/series/fps'
+        />
+        <section id='moreEssays'>
+          {/* The Next Four Essays */}
+          {essays.slice(1, 5).map((essay) => {
+            return (
+              <PostsListItem
+                key={essay.slug}
+                href={`essays/${essay.slug}`}
+                title={essay.title}
+                slug={essay.slug}
+                excerpt={essay.excerpt}
+                image_source={essay.image_source}
+              />
+            )
+          })}
+          <ReadMore href='/essays' />
         </section>
-        <section id='library'>
+        {/* <section id='library'>
           <Link href='/library'>
-            <SectionHeader>Library</SectionHeader>
+            Library
           </Link>
-        </section>
+        </section> */}
       </main>
     </DefaultLayout>
   )
@@ -53,12 +68,4 @@ export async function getStaticProps() {
     .map((essay) => essay.meta)
 
   return { props: { essays } }
-}
-
-function SectionHeader({ children }) {
-  return <h3>{children}</h3>
-}
-
-function SubHeader({ children }) {
-  return <p>{children}</p>
 }

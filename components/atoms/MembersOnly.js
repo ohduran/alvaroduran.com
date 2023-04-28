@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function MembersOnly({}) {
+export default function MembersOnly() {
   return (
     // sm:inline-block hidden on one, and block mt-3 sm:hidden on the other
     // see commoncog.com
