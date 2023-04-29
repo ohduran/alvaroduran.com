@@ -30,7 +30,7 @@ export default function Home({ essays }) {
         </header>
         <Essays
           className='px-2 sm:px-6 mx-auto py-4'
-          essays={essays.slice(-5, -1)}
+          essays={essays.slice(0, 4)}
         />
         <ComingSoon
           className='flex justify-between px-2 sm:px-6 mx-auto'
@@ -40,7 +40,7 @@ export default function Home({ essays }) {
         />
         <section id='moreEssays'>
           {/* The Next Four Essays */}
-          {essays.slice(1, 5).map((essay) => {
+          {essays.slice(4, 8).map((essay) => {
             return (
               <PostsListItem
                 key={essay.slug}
@@ -65,9 +65,7 @@ export default function Home({ essays }) {
 }
 
 export function getStaticProps() {
-  const essays = getAllEssays()
-    .slice(0, 5)
-    .map((essay) => essay.meta)
+  const essays = getAllEssays().map((essay) => essay.meta)
 
   return { props: { essays } }
 }
