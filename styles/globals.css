@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Import Hanken Grotesk font */
+@font-face {
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../public/Hanken_Grotesk/HankenGrotesk-VariableFont_wght.ttf')
+    format('truetype');
+}
+
+/* Import Lora font */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../public/Lora/Lora-VariableFont_wght.ttf') format('truetype');
+}
+
+/* Import Roboto Mono font */
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../public/Roboto_Mono/RobotoMono-VariableFont_wght.ttf')
+    format('truetype');
+}
+
+.font-family-hg {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.font-family-lora {
+  font-family: 'Lora', serif;
+}
+
+.font-family-roboto {
+  font-family: 'Roboto Mono';
+}

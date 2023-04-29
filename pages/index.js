@@ -1,8 +1,7 @@
 import { getAllEssays } from '@/src/api'
 import DefaultLayout from '@/components/layouts/DefaultLayout'
 import UnderlineHoverLink from '@/components/atoms/UnderlineHoverLink'
-import Link from 'next/link'
-import { H1, P } from '@/components/molecules/Typography'
+import { P } from '@/components/molecules/Typography'
 import Essays from '@/components/molecules/sections/Essays'
 import ComingSoon from '@/components/organisms/ComingSoon'
 import PostsListItem from '@/components/molecules/PostsListItem'
@@ -13,15 +12,18 @@ export default function Home({ essays }) {
     <DefaultLayout>
       <main>
         <header id='heroSection'>
-          <H1>
-            <span className=''>Maggie</span> makes visual essays about
-            programming, design, and anthropology.
-          </H1>
+          <h1 className='font-family-lora text-3xl max-w-full mb-4 leading-tighter md:max-w-lg md:text-5xl'>
+            <span className='font-semibold'>Álvaro</span> is an online payments
+            expert specialised in the travel industry.
+          </h1>
           <P>
-            Designer, anthropologist, and mediocre developer
+            Product-minded, Test-obsessed, Improvement-driven.
             <br />
-            Currently leading design at{' '}
-            <UnderlineHoverLink href='https://kiwi.com'>
+            Currently part of the Fintech Acquiring team at{' '}
+            <UnderlineHoverLink
+              href='https://kiwi.com'
+              className='text-kiwi-product-normal hover:text-kiwi-product-darker'
+            >
               Kiwi.com
             </UnderlineHoverLink>{' '}
           </P>
@@ -62,7 +64,7 @@ export default function Home({ essays }) {
   )
 }
 
-export async function getStaticProps() {
+export function getStaticProps() {
   const essays = getAllEssays()
     .slice(0, 5)
     .map((essay) => essay.meta)

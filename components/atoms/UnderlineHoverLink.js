@@ -1,6 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 
-export default function UnderlineHoverLink({ href, children }) {
-  return <Link href={href}>{children}</Link>
+export default function UnderlineHoverLink({ href, children, className }) {
+  return (
+    <Link href={href} className={` ${className}`}>
+      {children}
+    </Link>
+  )
 }

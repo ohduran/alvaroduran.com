@@ -5,7 +5,7 @@ import Footer from '@/components/organisms/Footer'
 export default function DefaultLayout({ children }) {
   return (
     <div
-      className='grid gap-1 min-h-screen container'
+      className='font-family-hg  grid gap-1 min-h-screen container'
       style={{
         gridTemplateRows: 'auto 1fr auto',
       }}

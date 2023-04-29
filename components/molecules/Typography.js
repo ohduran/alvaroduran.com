@@ -7,7 +7,7 @@ import React from 'react'
 
 export function H1({ children }) {
   return (
-    <h1 className='leading-8 text-4xl sm:text-5xl font-bold mb-4 tracking-tight'>
+    <h1 className='leading-8 text-4xl sm:text-5xl font-family-lora font-bold mb-4 tracking-tight'>
       {children}
     </h1>
   )
@@ -15,7 +15,7 @@ export function H1({ children }) {
 
 export function H2({ children }) {
   return (
-    <h2 className='leading-6 text-2xl sm:text-3xl font-semibold mb-2 tracking-normal'>
+    <h2 className='leading-6 text-2xl sm:text-3xl font-family-lora font-semibold mb-2 tracking-normal'>
       {children}
     </h2>
   )
