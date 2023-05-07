@@ -41,12 +41,13 @@ export const getEssayFromSlug = (slug) => {
       slug,
       excerpt: data.excerpt,
       title: data.title,
-      tags: (data.tags ? data.tags : []).sort(),
+      topics: (data.topics ? data.topics : []).sort(),
       date: data.date.toLocaleDateString('en-GB', {
         day: 'numeric',
         month: 'short',
         year: 'numeric',
       }),
+      image_source: data.image_source || '',
     },
   }
 }

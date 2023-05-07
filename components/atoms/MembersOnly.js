@@ -5,7 +5,7 @@ export default function MembersOnly() {
     // sm:inline-block hidden on one, and block mt-3 sm:hidden on the other
     // see commoncog.com
     <span className='sm:inline-block hidden'>
-      <div className='p-1.5 border border-gray-500 flex flex-row items-center text-gray-500 rounded-md font-sans w-max text-sm'>
+      <div className='p-1.5 border border-palette-grey-500 flex flex-row items-center text-gray-500 rounded-md font-sans w-max text-sm'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           className='h-4 w-4'

@@ -39,3 +39,17 @@
 .font-family-roboto {
   font-family: 'Roboto Mono';
 }
+
+.bg-floating-cogs {
+  @apply bg-palette-black;
+  background-image: url('../components/atoms/backgrounds/floating-cogs.svg');
+}
+
+.bg-bank-note {
+  background-color: #dfdbe5;
+  background-image: url('../components/atoms/backgrounds/bank-note.svg');
+}
+
+.default-hover-transition {
+  @apply transition duration-150 ease-in;
+}

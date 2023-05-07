@@ -15,7 +15,7 @@ export default function Essays({ essays, className }) {
       </p>
       <div className='flex flex-col md:flex-row justify-between px-2 sm:px-6 mx-auto py-4'>
         <LastEssay
-          className='md:basis-1/2 md:pr-4 border-b md:border-0 border-slate-300 mb-4 pb-4 md:mb-0 md:pb-0'
+          className='md:basis-1/2 md:pr-4 border-b md:border-0 border-palette-grey mb-4 pb-4 md:mb-0 md:pb-0'
           essay={essays[0]}
         />
         <SideEssayTrio
