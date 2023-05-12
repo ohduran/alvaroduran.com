@@ -21,5 +21,10 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'), // https://tailwindcss.com/docs/typography-plugin
+    // require("daisyui"),  // https://daisyui.com/
   ],
+
+  daisyui: {
+    themes: [], // https://daisyui.com/docs/themes/#-1
+  },
 }

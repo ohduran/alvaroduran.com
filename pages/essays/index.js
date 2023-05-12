@@ -12,7 +12,6 @@ export default function EssaysHome({ essays }) {
       </header>
       <main className='px-2 sm:px-6 py-6 mx-auto'>
         <div>
-          {/* The Next Four Essays */}
           {essays.map((essay) => {
             return (
               <PostsListItem
