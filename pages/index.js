@@ -34,9 +34,9 @@ export default function Home({ essays }) {
       />
       <ComingSoon
         className='flex justify-between w-full'
-        title='The Fraud Provider Series'
-        subtitle='How merchants straddle the line between crime and payment experience.'
-        href='/series/fps'
+        title='The Disrupting Payments Series'
+        subtitle='Reinventing the financial system from first principles.'
+        href='/series/disrupting-payments'
       />
       <section className='flex md:flex-row flex-col px-2 sm:px-6 mx-auto py-6'>
         <div id='moreEssays' className='px-2 sm:px-6 py-6 mx-auto'>
@@ -50,7 +50,7 @@ export default function Home({ essays }) {
                 title={essay.title}
                 slug={essay.slug}
                 excerpt={essay.excerpt}
-                image_source={essay.image_source}
+                image_source={`/media/essays/${essay.slug}/${essay.image_source}`}
               />
             )
           })}

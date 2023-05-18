@@ -1,7 +1,7 @@
 import DefaultLayout from '@/components/layouts/DefaultLayout'
+import PostsListItem from '@/components/molecules/PostsListItem'
 import { H1 } from '@/components/molecules/Typography'
 import { getAllTalks } from '@/src/api'
-import Link from 'next/link'
 import React from 'react'
 
 export default function Talks({ talks }) {
@@ -14,9 +14,14 @@ export default function Talks({ talks }) {
         <div>
           {talks.map((talk) => {
             return (
-              <Link key={talk.slug} href={`talks/${talk.slug}`}>
-                <h2>{talk.title}</h2>
-              </Link>
+              <PostsListItem
+                key={talk.slug}
+                href={`talks/${talk.slug}`}
+                title={talk.title}
+                slug={talk.slug}
+                excerpt={talk.excerpt}
+                image_source={`https://img.youtube.com/vi/${talk.youtubeId}/0.jpg`}
+              />
             )
           })}
         </div>

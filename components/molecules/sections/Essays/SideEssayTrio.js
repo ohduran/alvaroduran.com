@@ -12,7 +12,7 @@ export default function SideEssayTrio({ essays, className }) {
             title={essay.title}
             slug={essay.slug}
             excerpt={essay.excerpt}
-            image_source={essay.image_source}
+            image_source={`/media/essays/${essay.slug}/${essay.image_source}`}
           />
         )
       })}
