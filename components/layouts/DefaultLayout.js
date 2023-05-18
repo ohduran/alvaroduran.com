@@ -1,20 +1,18 @@
-import Link from "next/link";
+import React from 'react'
+import Header from '@/components/organisms/Header'
+import Footer from '@/components/organisms/Footer'
 
 export default function DefaultLayout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen">
-      <header className="bg-fuchsia-100 mb-8 py-4">
-        <div className="container mx-auto flex justify-center">
-          <Link href="/">🏡</Link>
-          <span className="mx-auto">Welcome to my blog</span>{" "}
-        </div>
-      </header>
-      <main className="container mx-auto flex-1">{children}</main>
-      <footer className="bg-fuchsia-100 mt-8 py-4">
-        <div className="container mx-auto flex justify-center">
-          &copy; 2022 DailyDevTips
-        </div>
-      </footer>
+    <div
+      className='font-family-hg text-palette-black bg-white grid gap-1 min-h-screen'
+      style={{
+        gridTemplateRows: 'auto 1fr auto',
+      }}
+    >
+      <Header />
+      <main className=''>{children}</main>
+      <Footer />
     </div>
-  );
+  )
 }
