@@ -1,0 +1,23 @@
+{
+  "default": true,
+  "files": ["*.md", "*.mdx"],
+  "MD003": {
+    "style": "atx"
+  },
+  "MD007": {
+    "indent": 4
+  },
+  "MD013": {
+    "line_length": 120,
+    "heading_line_length": 80,
+    "code_block_line_length": 80,
+    "code_blocks": true,
+    "tables": true,
+    "headings": true,
+    "headers": true,
+    "strict": false,
+    "stern": false
+  },
+  "no-hard-tabs": false,
+  "whitespace": false
+}

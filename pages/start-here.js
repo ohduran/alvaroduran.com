@@ -11,7 +11,11 @@ export default function StartHere({ source }) {
   return (
     <DefaultLayout>
       <main className='px-2 sm:px-6 mx-auto py-2 sm:py-6'>
-        <MDXRemote {...source} components={components} />
+        <div className='mx-auto max-w-2xl'>
+          <div className='mt-2 mx-auto prose text-normal sm:text-lg md:text-xl lg:text-xl'>
+            <MDXRemote {...source} components={components} />
+          </div>
+        </div>
       </main>
     </DefaultLayout>
   )

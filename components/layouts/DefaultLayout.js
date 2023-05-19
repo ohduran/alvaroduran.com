@@ -11,7 +11,7 @@ export default function DefaultLayout({ children }) {
       }}
     >
       <Header />
-      <main className=''>{children}</main>
+      <main className='my-2 sm:my-4'>{children}</main>
       <Footer />
     </div>
   )

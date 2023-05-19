@@ -7,7 +7,7 @@ import React from 'react'
 
 export function H1({ children }) {
   return (
-    <h1 className='leading-8 text-4xl sm:text-5xl font-family-lora font-bold mb-4 tracking-tight'>
+    <h1 className='text-4xl font-bold tracking-tight sm:text-6xl leading-8 font-family-lora mb-4'>
       {children}
     </h1>
   )
@@ -31,4 +31,8 @@ export function H4({ children }) {
 
 export function P({ children }) {
   return <p className='text-xl font-semibold'>{children}</p>
+}
+
+export function SubTitle({ children }) {
+  return <p className='mt-6 text-lg leading-8 text-gray-600'>{children}</p>
 }
