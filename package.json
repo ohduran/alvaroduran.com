@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
-    "daisyui": "^2.51.6",
+    "daisyui": "^3.0.0",
     "eslint-config-next": "13.1.6",
     "gray-matter": "^4.0.3",
     "next": "13.1.6",
